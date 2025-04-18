@@ -46,7 +46,7 @@ Traceability matrix between meeting questions and sections in documentation
 ## Testing and Continuous Integration
 For research software, proper testing routines not only gives confidence in the software but also credibility to the research that it powers.
 Since a (pseudo)oracle is often nonexistent for the exact research problem/model, the design may need to be structured around what is available for testing, such as simple models.
-By designing a standardized interface, we can test the majority of the software with simpler models, minimizing the untestable portion, which can be verified with more manual methods such as code walkthroughs [@Smith2016].
+By designing a standardized interface, we can test the majority of the software with simpler models, minimizing the untestable portion, which can be verified with more manual methods such as code walkthroughs {cite}`Smith2016`.
 
 Since the domain expert likely does not possess the same level of knowledge to make and conduct tests, Continuous Integration (CI) with GitHub Actions and language specific testing tools should be introduced early on in the project.
 This prepares the eventual departure of the developer from the project, after which the domain expert (and potential future users) will take over the software.
@@ -54,7 +54,7 @@ The actual test cases run with GitHub Actions may be a subset of all the cases, 
 Developers can use our GitHub template as an example of how to set up GitHub Actions for continuous integration.
 
 ## Simplified Design Documents
-Originally, Parnas introduced two pieces of design documents: Module Guide (MG) [@Parnas1972] and Module Interface Specification (MIS) [@Parnas1972MIS].
+Originally, Parnas introduced two pieces of design documents: Module Guide (MG) {cite}`Parnas1972` and Module Interface Specification (MIS) {cite}`Parnas1972MIS`.
 Because the domain expert's involvement is likely low in the design phase as shown in our V-model above, we propose the reduction of the MIS into a code skeleton during the design phase, as it will not be reviewed by the domain expert.
 This leverages the function headers, type definitions and comments formatting of modern IDEs and programming language.
 It also reduces the risk of code diverging from the design documents that are not always kept up to date.
@@ -135,7 +135,7 @@ def gaussian(dk, sigma):
 As identified in the [Pain Points](./introduction.md#pain-points) section, the domain expert may not be motivated to spend time and effort toward making the software more sustainable as they do not perceive the academic recognition for it.
 To address this, we believe two approaches that are already seen on some other projects should be applied to research software whenever possible:
 
-First is the amalgamation between software and paper. An example can be found on a computer vision research project, v2e [@HuEtAl2021]. Its GitHub repository README contains the follow section:
+First is the amalgamation between software and paper. An example can be found on a computer vision research project, v2e {cite}`HuEtAl2021`. Its GitHub repository README contains the follow section:
 
 > **Citation**
 >

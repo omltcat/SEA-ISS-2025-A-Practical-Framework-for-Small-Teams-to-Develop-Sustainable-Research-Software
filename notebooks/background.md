@@ -4,7 +4,7 @@ Beside inspiration from the aforementioned [Pain Points](./introduction.md#pain-
 ## 6DOF Trajectory Simulator
 This was a typical “one-person team” scenario where the developer was the domain
 expert.
-Being a high-precision ballistic computer to simulate spinning projectiles in a 3D space, this MATLAB program enabled previous research by the author at Embry-Riddle Aeronautical University (ERAU) [@Du2021].
+Being a high-precision ballistic computer to simulate spinning projectiles in a 3D space, this MATLAB program enabled previous research by the author at Embry-Riddle Aeronautical University (ERAU) {cite}`Du2021`.
 
 The main challenge faced in this project was the lack existing resources to test against for the complex 6DOF trajectory model.
 This was successfully mitigated by conducting tests with simpler models under a standardized interface to validate the software.
@@ -12,7 +12,7 @@ However, since it was developed in an ad-hoc manner, with little traceable requi
 
 ## SynthEddy
 This was a recent project under the "developer & domain expert collaboration" setting, where the author served as the developer.
-[SynthEddy](https://github.com/omltcat/turbulent-flow) [@SynthEddy] is a Python program to generate turbulent flow fields consisting of numerous "eddies" (circular flow) with the Synthetic Eddy Method [@PolettoEtAl2013], to be used as initial conditions (IC) and boundary conditions (BC) for computational fluid dynamics (CFD) simulations.
+[SynthEddy](https://github.com/omltcat/turbulent-flow) {cite}`SynthEddy` is a Python program to generate turbulent flow fields consisting of numerous "eddies" (circular flow) with the Synthetic Eddy Method {cite}`PolettoEtAl2013`, to be used as initial conditions (IC) and boundary conditions (BC) for computational fluid dynamics (CFD) simulations.
 
 ```{figure} figures/SynthEddy_tunnel.png
 :name: SynthEddy Tunnel Flow
@@ -23,10 +23,10 @@ Velocity magnitude cross-section plot of a non-uniform mean velocity field gener
 
 SynthEddy was developed in a document-driven process, with high traceability of theory, requirements, design, and implementation, leading to easy expansion of the software.
 However, it did face a major setback and subsequent redesign because the developer was unaware of the typical use case of the software.
-The initial, fully information-hiding modular design (as in [@Parnas1986]) to mimic the physical system was too slow and resource-intensive for the computation scale (in terms of mesh resolution and number of eddies) needed in the domain in practice. 
+The initial, fully information-hiding modular design (as in {cite:t}`Parnas1986`) to mimic the physical system was too slow and resource-intensive for the computation scale (in terms of mesh resolution and number of eddies) needed in the domain in practice. 
 Our framework aims to avoid the problem of such communication breakdown between the developer and the domain expert.
 
 ## Current Practices
-The inspiration and jumping off point for this framework is the document-driven template by Smith et al. [@SmithEtAl2024], which itself is based on the work by Parnas et al. [@Parnas1986].
+The inspiration and jumping off point for this framework is the document-driven template by {cite:t}`SmithEtAl2024`, which itself is based on the work by {cite:t}`Parnas1986`.
 This previous template offers strong traceability through formal documentation, and is inline with our expectation that the software contributing to a research study should be able to withstand the same level of scrutiny.
 However, its somewhat rigid struct made it hard to adapt to the changing nature of research, and introduced too much overhead, taking away valuable time from both the developer and the domain expert.
